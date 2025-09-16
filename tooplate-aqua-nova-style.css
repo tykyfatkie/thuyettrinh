@@ -526,41 +526,51 @@
         }
 
         .about-card {
-            background: rgba(6, 182, 212, 0.12);
-            backdrop-filter: blur(15px);
-            border-radius: 25px;
-            padding: 40px 30px;
-            border: 1px solid rgba(6, 182, 212, 0.3);
-            transition: all 0.4s ease;
-            text-align: center;
             position: relative;
-            overflow: hidden;
+            display: inline-block;
+            padding: 30px;
+            background: rgba(6, 182, 212, 0.12);
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
         }
 
-        .about-card::before {
-            content: '';
+        /* Mini popup */
+        .mini-popup {
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
-            transform: rotate(45deg);
-            transition: all 0.5s ease;
+            bottom: 110%; /* nằm trên card */
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(6, 182, 212, 0.95);
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            white-space: nowrap;
             opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
         }
 
-        .about-card:hover::before {
+        /* mũi tên */
+        .mini-popup::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: rgba(6, 182, 212, 0.95) transparent transparent transparent;
+        }
+
+        /* Hover mới hiện */
+        .about-card:hover .mini-popup {
             opacity: 1;
-            animation: shimmer 0.8s ease;
+            transform: translateX(-50%) translateY(-5px);
         }
 
-        .about-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 30px 60px rgba(6, 182, 212, 0.3);
-            border-color: var(--sea-foam);
-            background: rgba(6, 182, 212, 0.18);
-        }
+
 
         @keyframes shimmer {
             0% { transform: rotate(45deg) translateY(-100%); }
