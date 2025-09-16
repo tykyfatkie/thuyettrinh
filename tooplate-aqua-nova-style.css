@@ -23,6 +23,13 @@
             --twilight-purple: #7c3aed;
         }
 
+        @font-face {
+        font-family: 'Montserrat';
+        src: url('fonts/Montserrat-Regular.otf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+}
+
         body {
             font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
             background: linear-gradient(180deg, #0f172a 0%, #1e40af 30%, #0891b2 70%, #115e59 100%);
@@ -1701,11 +1708,6 @@
             .footer-bottom {
                 font-size: 0.85rem;
             }
-
-
-
-
-      
             
 
         }
