@@ -1,11 +1,3 @@
-/*
-
-Tooplate 2138 Aqua Nova
-
-https://www.tooplate.com/view/2138-aqua-nova
-
-*/
-
 // JavaScript Document
 
 // Underwater Background Animation
