@@ -11,7 +11,7 @@
                 bubble.style.width = Math.random() * 10 + 5 + 'px';
                 bubble.style.height = bubble.style.width;
                 bubble.style.left = Math.random() * 100 + '%';
-                bubble.style.animationDelay = Math.random() * 10 + 's';
+                bubble.style.animationDelay = Math.random() * 1 + 's';
                 bubble.style.animationDuration = Math.random() * 5 + 8 + 's';
                 underwaterBg.appendChild(bubble);
             }
