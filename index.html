@@ -14,6 +14,26 @@
         src: url('fonts/Montserrat-Regular.otf') format('truetype');
         font-weight: normal;
         font-style: normal; 
+        }
+        img.glow {
+        margin-top: 100px;
+        width: 600px;
+        height: 400px;
+        border-radius: 10px;
+        transition: box-shadow 0.3s ease;
+        opacity: 50%;
+        box-shadow: 
+            0 0 20px rgba(0, 255, 255, 0.6),
+            0 0 40px rgba(255, 0, 255, 0.5),
+            0 0 60px rgba(255, 255, 0, 0.4);
+        }
+
+    img.glow:hover {
+        opacity: 100%;
+      box-shadow: 
+        0 0 30px rgba(0, 255, 255, 0.9),
+        0 0 60px rgba(255, 0, 255, 0.8),
+        0 0 90px rgba(255, 255, 0, 0.7);
     }
     </style>
 </head>
@@ -143,7 +163,7 @@
                                 <h4 style="color: rgba(224, 255, 85, 0.795);">Ý nghĩa</h4>
                                 <p>Mở rộng phạm vi dân chủ so với thời cổ đại, tạo cơ sở cho các giá trị dân chủ hiện đại.</p>
                             </div>
-                            <img src="/images/2.jpg" alt="mô tả ảnh" width="300" height="200">
+                            <img src="/images/2.jpg" class="glow">
                         </div>
                     </div>
                 </div>
@@ -164,6 +184,7 @@
                             <p>Phụ nữ và người lao động nghèo phải mất hàng thế kỷ đấu tranh mới giành được quyền tham gia chính trị.</p>
                         </div>
                     </div>
+                    <img src="/images/3.jpg" class="glow">
                 </div>
             </div>
 
