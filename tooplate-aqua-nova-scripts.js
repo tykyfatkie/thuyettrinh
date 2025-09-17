@@ -55,6 +55,34 @@
             });
         }
 
+        const bubble = document.getElementById('podcast-bubble');
+        const audio = document.getElementById('podcast-audio');
+
+        bubble.addEventListener('mouseenter', () => {
+            if (audio.paused) {
+                bubble.textContent = "🔊"; // icon sóng nhạc khi hover
+            }
+        });
+
+        bubble.addEventListener('mouseleave', () => {
+            if (audio.paused) {
+                bubble.textContent = "▶️"; // trở lại icon play khi rời chuột
+            }
+        });
+
+        bubble.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                bubble.textContent = "⏸"; // icon pause khi đang phát
+                bubble.setAttribute("data-tooltip", "Pause Podcast");
+            } else {
+                audio.pause();
+                bubble.textContent = "▶️";
+                bubble.setAttribute("data-tooltip", "Play Podcast");
+            }
+        });
+
+
         // Simple initialization
         createBubbles();
         createOceanParticles();
@@ -135,3 +163,4 @@
                 }
             });
         }
+        

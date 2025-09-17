@@ -306,6 +306,49 @@
             background: rgba(6, 182, 212, 0.18);
         }
 
+        /* Podcast */
+        #podcast-bubble {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background: #06b6d4;
+        color: white;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: 0.3s;
+        z-index: 9999;
+    }
+
+    /* Tooltip */
+    #podcast-bubble::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 75px;
+        right: 50%;
+        transform: translateX(50%);
+        background: rgba(0,0,0,0.8);
+        color: white;
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 6px;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    #podcast-bubble:hover::after {
+        opacity: 1;
+    }
+
+
         /* Hero Section */
         .hero {
             height: 100vh;
