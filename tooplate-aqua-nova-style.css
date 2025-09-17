@@ -313,7 +313,7 @@
         right: 20px;
         width: 60px;
         height: 60px;
-        background: #06b6d4;
+        background: #0682d4;
         color: white;
         font-size: 24px;
         display: flex;
@@ -324,6 +324,7 @@
         box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         transition: 0.3s;
         z-index: 9999;
+        opacity: 40%;
     }
 
     /* Tooltip */
@@ -342,6 +343,10 @@
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.3s;
+    }
+
+    #podcast-bubble:hover {
+        opacity: 100%;
     }
 
     #podcast-bubble:hover::after {
